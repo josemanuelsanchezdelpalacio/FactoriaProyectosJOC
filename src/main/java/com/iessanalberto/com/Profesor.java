@@ -12,14 +12,14 @@ import java.util.ArrayList;
 
 public class Profesor {
 
-	private String centro, rol, nombre, contrasenia, contacto;
-	private ArrayList<String> familiaProfesional;
+	private ArrayList<Centros> centro;
+	private String rol, nombre, contrasenia, contacto, familiaProfesional;
 	private Double puntuacion;
 	private ArrayList<Proyecto> proyectos;
 	
 	public Profesor() {}
 
-	public Profesor(String centro, String rol, String nombre, String contrasenia, ArrayList<String> familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos) {
+	public Profesor(ArrayList<Centros> centro, String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos) {
 		this.centro = centro;
 		this.rol = rol;
 		this.nombre = nombre;
@@ -30,11 +30,12 @@ public class Profesor {
 		this.proyectos = proyectos;
 	}
 
+	@XmlElementWrapper(name="centros")
 	@XmlElement(name="centro")
-	public String getCentro() {
+	public ArrayList<Centros> getCentro() {
 		return centro;
 	}
-	public void setCentro(String centro) {
+	public void setCentro(ArrayList<Centros> centro) {
 		this.centro = centro;
 	}
 	
@@ -62,12 +63,11 @@ public class Profesor {
 		this.contrasenia = contrasenia;
 	}
 
-	@XmlElementWrapper(name="familiaProfesional")
-	@XmlElement(name="familia")
-	public ArrayList<String> getFamiliaProfesional() {
+	@XmlElement(name="familiaProfesional")
+	public String getFamiliaProfesional() {
 		return familiaProfesional;
 	}
-	public void setFamiliaProfesional(ArrayList<String> familiaProfesional) {
+	public void setFamiliaProfesional(String familiaProfesional) {
 		this.familiaProfesional = familiaProfesional;
 	}
 
@@ -86,9 +86,9 @@ public class Profesor {
 	public void setPuntuacion(Double puntuacion) {
 		this.puntuacion = puntuacion;
 	}
-	
+
 	@XmlElementWrapper(name="proyectos")
-	@XmlElement(name="proyectos")
+	@XmlElement(name="proyecto")
 	public ArrayList<Proyecto> getProyectos() {
 		return proyectos;
 	}

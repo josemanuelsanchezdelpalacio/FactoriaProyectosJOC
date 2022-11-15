@@ -14,14 +14,14 @@ public class Usuario {
 
 	private String rol, nombre, contrasenia, contacto;
 	private Double puntuacion;
-	private ArrayList<String> familiaProfesional;
+	private String familiaProfesional;
 	private ArrayList<Proyecto> proyectos;
 	private ArrayList<Alumno> alumnos;
 	private ArrayList<Profesor> profesores;
 
 	public Usuario() {}
 	
-	public Usuario(String rol, String nombre, String contrasenia, ArrayList<String> familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos, ArrayList<Alumno> alumnos, ArrayList<Profesor> profesores) {
+	public Usuario(String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos, ArrayList<Alumno> alumnos, ArrayList<Profesor> profesores) {
 		this.rol = rol;
 		this.nombre = nombre;
 		this.contrasenia = contrasenia;
@@ -57,12 +57,11 @@ public class Usuario {
 		this.contrasenia = contrasenia;
 	}
 
-	@XmlElementWrapper(name="familiaProfesional")
-	@XmlElement(name="familia")
-	public ArrayList<String> getFamiliaProfesional() {
+	@XmlElement(name="familiaProfesional")
+	public String getFamiliaProfesional() {
 		return familiaProfesional;
 	}
-	public void setFamiliaProfesional(ArrayList<String> familiaProfesional) {
+	public void setFamiliaProfesional(String familiaProfesional) {
 		this.familiaProfesional = familiaProfesional;
 	}
 
@@ -83,7 +82,7 @@ public class Usuario {
 	}
 
 	@XmlElementWrapper(name="proyectos")
-	@XmlElement(name="proyectos")
+	@XmlElement(name="proyecto")
 	public ArrayList<Proyecto> getProyectos() {
 		return proyectos;
 	}

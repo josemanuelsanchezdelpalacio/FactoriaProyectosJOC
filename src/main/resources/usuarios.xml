@@ -6,9 +6,7 @@
 	<nombre>USER1</nombre>
 	<contrasenia>CONTRA-1234</contrasenia>
 	<puntuacion>1.0</puntuacion>
-	<familiaProfesional>
-		<familia></familia>
-	</familiaProfesional>
+	<familiaProfesional></familiaProfesional>
 	<contacto>CONTACTO@GMAIL.COM</contacto>
 	<proyectos>
 		<proyecto></proyecto>
@@ -17,14 +15,14 @@
 	//datos alumnos
 	<alumnos>
 		<alumno>
-			<centro>CENTRO1</centro>
+			<centros>
+				<centro></centro>
+			</centros>
 			<rol>ROL-ALUMNO</rol>
 			<nombre>NOMBREALUMNO</nombre>
 			<contrasenia>CONTRA-5710</contrasenia>
 			<puntuacion>1.0</puntuacion>
-			<familiaProfesional>
-				<familia></familia>
-			</familiaProfesional>
+			<familiaProfesional></familiaProfesional>
 			<contacto>CONTACTOALUMNO@GMAIL.COM</contacto>
 			<proyectos>
 				<proyecto></proyecto>
@@ -35,14 +33,14 @@
 	//datos profesores
 	<profesores>
 		<profesor>
-			<centro>CENTRO1</centro>
+			<centros>
+				<centro></centro>
+			</centros>
 			<rol>ROL-PROFESOR</rol>
 			<nombre>NOMBREPROFESOR</nombre>
 			<contrasenia>CONTRA-4170</contrasenia>
 			<puntuacion>1.0</puntuacion>
-			<familiaProfesional>
-				<familia></familia>
-			</familiaProfesional>
+			<familiaProfesional></familiaProfesional>
 			<contacto>CONTACTOPROFESOR@GMAIL.COM</contacto>
 			<proyectos>
 				<proyecto></proyecto>
