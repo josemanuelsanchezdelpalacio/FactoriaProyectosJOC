@@ -21,7 +21,7 @@ public class Main {
         Usuario listaUsuarios;
         Centros listaCentros;
 
-        listaProyectos = (com.iessanalberto.com.listaProyectos) unmarshaller.unmarshal(new File("src/main/resources/proyectos.xml"));
+        listaProyectos = (listaProyectos) unmarshaller.unmarshal(new File("src/main/resources/proyectos.xml"));
         listaUsuarios = (Usuario) unmarshaller.unmarshal(new File("src/main/resources/usuarios.xml"));
         listaCentros = (Centros) unmarshaller.unmarshal(new File("src/main/resources/centros.xml"));
 
